@@ -31,14 +31,17 @@ const Container = styled.section`
 
 const TextContainer = styled.div`
     border: 2px solid hsl(0, 0%, 100%);
+    padding: 30px;
     h1 {
         font-family: "Josefin Sans", sans-serif;
         font-size: 40px;
         font-weight: 300;
         color: hsl(0, 0%, 100%);
-        padding: 30px;
-        line-height: 100%;
+        line-height: 120%;
         margin: 0;
+        @media (max-width: 280px) {
+            font-size: 23px;
+        }
     }
     @media (min-width: 576px) {
         width: 80%;
