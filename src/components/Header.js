@@ -68,7 +68,7 @@ const Container = styled.header`
     align-items: center;
     justify-content: space-between;
     font-family: "Alata", sans-serif;
-    padding: 0 8%;
+    padding: 0 6%;
     position: absolute;
     left: 0;
     right: 0;

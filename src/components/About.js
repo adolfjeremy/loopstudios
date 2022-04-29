@@ -1,12 +1,22 @@
 import React from "react";
 import styled from "styled-components";
-import aboutImage from "./../images/image-interactive.jpg";
+import aboutImageDekstop from "./../images/desktop/image-interactive.jpg";
+import aboutImageMobile from "./../images/mobile/image-interactive.jpg";
 
 function About() {
     return (
         <Container>
             <ImageContainer>
-                <Image src={aboutImage} alt="a guy using VR headset" />
+                <DekstopImage
+                    src={aboutImageDekstop}
+                    alt="a guy using VR headset"
+                    className="dekstop"
+                />
+                <MobileImage
+                    src={aboutImageMobile}
+                    alt="a guy using VR headset"
+                    className="mobile"
+                />
             </ImageContainer>
             <TextContainer>
                 <h2>THE LEADER IN INTERACTIVE VR</h2>
@@ -25,7 +35,7 @@ function About() {
 const Container = styled.section`
     display: flex;
     flex-direction: column;
-    padding: 100px 8%;
+    padding: 100px 6%;
     text-align: center;
     @media (min-width: 1024px) {
         flex-direction: row;
@@ -40,8 +50,18 @@ const ImageContainer = styled.div`
         width: 65%;
     }
 `;
-const Image = styled.img`
+
+const DekstopImage = styled.img`
     width: 100%;
+    @media (max-width: 768px) {
+        display: none;
+    }
+`;
+const MobileImage = styled.img`
+    width: 100%;
+    @media (min-width: 768px) {
+        display: none;
+    }
 `;
 
 const TextContainer = styled.div`
@@ -60,7 +80,6 @@ const TextContainer = styled.div`
     h2 {
         color: hsl(0, 0%, 0%);
         font-size: 30px;
-        font-family: "Josefin Sans", sans-serif;
         font-weight: 300;
         margin: 60px 0 15px;
         @media (min-width: 1024px) {

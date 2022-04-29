@@ -17,7 +17,7 @@ const Container = styled.section`
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 0 8%;
+    padding: 0 6%;
     height: 100vh;
     background-image: url(${mobileBackground});
     background-repeat: no-repeat;
@@ -33,7 +33,6 @@ const TextContainer = styled.div`
     border: 2px solid hsl(0, 0%, 100%);
     padding: 30px;
     h1 {
-        font-family: "Josefin Sans", sans-serif;
         font-size: 40px;
         font-weight: 300;
         color: hsl(0, 0%, 100%);
